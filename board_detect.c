@@ -64,12 +64,13 @@ bool test_sqc()
 
 void detect_board()
 {
-    /*
+    
     gpio_pull_down(PIN_GLI_WS);
     gpio_pull_down(PIN_GLI_PICO);
     gpio_pull_down(PIN_GLI_XIAO);
     gpio_pull_down(PIN_GLI_ITSY);
     gpio_disable_input_output(PIN_RST);
+/*
     if (test_ws()) {
         cur_board = BOARD_WS;
     } else if (test_xiao()) {
