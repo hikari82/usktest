@@ -24,7 +24,7 @@ bool write_payload();
 // overclock to 300 MHz
 void init_system() {
     vreg_set_voltage(VREG_VOLTAGE_1_30);
-	set_sys_clock_khz(300000, true);
+	set_sys_clock_khz(250000, true);
 }
 
 // filled within "fast check" on eMMC init
@@ -53,7 +53,7 @@ bool safe_test_voltage(int pin, float target, float range)
 // test all ADC pins
 void self_test()
 {
-    absolute_time_t tio_time = make_timeout_time_ms(2500);
+    absolute_time_t tio_time = make_timeout_time_ms(1000);
     adc_init();
     bool rst_ok = false, cmd_ok = false, d0_ok = false, clk_ok = false;
     while (!time_reached(tio_time)) {
@@ -106,7 +106,7 @@ int main()
     // test pins
     self_test();
     // wait till the CPU has proper power & started reading the eMMC
-    wait_for_boot(2500);
+    wait_for_boot(1000);
     // ensure the BCT has not been overwritten by system update
     bool force_check = fast_check();
     was_self_reset = force_button || !is_configured(cid_buf + 1);
