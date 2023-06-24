@@ -87,8 +87,7 @@ int main()
     // stop watchdog
     *(uint32_t*)(0x40058000 + 0x3000) = (1 << 30);
     // init reset, mosfet and LED
-    //detect_board();
-    cur_board = BOARD_PI;
+    detect_board();
     // clocks & voltage
     init_system();
     // fuses counter
