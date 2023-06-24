@@ -149,10 +149,10 @@ void gpio_enable_input_output(int pin)
 void reset_cpu() {
     gpio_enable_input_output(PIN_RST);
     gpio_pull_up(PIN_RST);
-    sleep_us(1000);
+    sleep_us(200);
     gpio_init(PIN_RST);
     gpio_set_dir(PIN_RST, true);
-    sleep_us(2000);
+    sleep_us(200);
     gpio_deinit(PIN_RST);
     gpio_disable_pulls(PIN_RST);
     gpio_disable_input_output(PIN_RST);
