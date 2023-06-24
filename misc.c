@@ -152,7 +152,7 @@ void reset_cpu() {
     sleep_us(500);
     gpio_init(PIN_RST);
     gpio_set_dir(PIN_RST, true);
-    sleep_us(1000);
+    sleep_us(500);
     gpio_deinit(PIN_RST);
     gpio_disable_pulls(PIN_RST);
     gpio_disable_input_output(PIN_RST);
