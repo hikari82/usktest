@@ -17,7 +17,7 @@ enum board_type {
     BOARD_SQ
 };
 
-enum board_type cur_board = BOARD_WS;
+enum board_type cur_board = BOARD_PI;
 
 bool detect_by_pull_up(int frc_pin, int det_pin)
 {
@@ -64,6 +64,7 @@ bool test_sqc()
 
 void detect_board()
 {
+    /*
     gpio_pull_down(PIN_GLI_WS);
     gpio_pull_down(PIN_GLI_PICO);
     gpio_pull_down(PIN_GLI_XIAO);
@@ -76,12 +77,15 @@ void detect_board()
     } else if (test_itsy()) {
         cur_board = BOARD_IB;
     } else if (test_pico()) {
+    */
         cur_board = BOARD_PI;
+    /*
     } else if (test_sqc()) {
         cur_board = BOARD_SQ;
     } else {
         cur_board = BOARD_WS;
     }
+    */
 }
 
 int led_pin()
