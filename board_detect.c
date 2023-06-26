@@ -49,7 +49,7 @@ bool test_itsy()
 
 bool test_pico()
 {
-    return detect_by_pull_up(-1, 29);
+    return detect_by_pull_up(-1, 22);
     //return true;
 }
 
