@@ -29,10 +29,13 @@
 
 #define PIN_RGB_MODE_WS 25
 
+//#define PIN_DAT 22
 #define PIN_DAT 22
+
 
 #define PIN_CMD 28
 #define PIN_CLK 27
 #define PIN_RST 26
 
-#define PIN_TEMP_PICO 22
+//#define PIN_TEMP_PICO 22
+#define PIN_TEMP_PICO 29
