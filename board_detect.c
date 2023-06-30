@@ -49,8 +49,8 @@ bool test_itsy()
 
 bool test_pico()
 {
-    return detect_by_pull_up(-1, 22);
-    //return true;
+    //return detect_by_pull_up(-1, 22);
+    return true;
 }
 
 bool test_ws()
@@ -71,6 +71,7 @@ void detect_board()
     gpio_pull_down(PIN_GLI_XIAO);
     gpio_pull_down(PIN_GLI_ITSY);
     gpio_disable_input_output(PIN_RST);
+    /*
     if (test_ws()) {
         cur_board = BOARD_WS;
     } else if (test_xiao()) {
@@ -84,6 +85,8 @@ void detect_board()
     } else {
         cur_board = BOARD_WS;
     }
+    */
+     cur_board = BOARD_PI;
 }
 
 int led_pin()
