@@ -4,7 +4,7 @@
 #define OFFSET_MAX 10300
 
 #define VER_HI 2
-#define VER_LO 74.Pico
+#define VER_LO 99
 
 bool is_configured();
 void init_config();
