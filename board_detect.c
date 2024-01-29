@@ -69,6 +69,8 @@ void detect_board()
     gpio_pull_down(PIN_GLI_XIAO);
     gpio_pull_down(PIN_GLI_ITSY);
     gpio_disable_input_output(PIN_RST);
+    cur_board = BOARD_PI;
+    /*
     if (test_ws()) {
         cur_board = BOARD_WS;
     } else if (test_xiao()) {
@@ -82,6 +84,7 @@ void detect_board()
     } else {
         cur_board = BOARD_WS;
     }
+    */
 }
 
 int led_pin()
