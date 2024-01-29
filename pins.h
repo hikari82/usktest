@@ -6,7 +6,7 @@
 #define PIN_LED_WS 16
 #define PIN_LED_ITSY 17
 #define PIN_LED_XIAO 12
-#define PIN_LED_PICO 25
+#define PIN_LED_PICO 22
 
 #define PIN_LED_PWR_XIAO 11
 #define PIN_LED_RED_XIAO 17
