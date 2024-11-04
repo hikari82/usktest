@@ -1,9 +1,9 @@
-#define PIN_GLI_WS 14
+#define PIN_GLI_WS 15
 #define PIN_GLI_XIAO 6
 #define PIN_GLI_PICO 21
 #define PIN_GLI_ITSY 24
 
-#define PIN_LED_WS 15
+#define PIN_LED_WS 14
 #define PIN_LED_ITSY 17
 #define PIN_LED_XIAO 12
 #define PIN_LED_PICO 25
